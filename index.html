@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Information</title>
+    <style>
+        #profile {
+            border: 2px solid red;
+            
+            max-width: 200px;
+
+           
+        }
+    </style>
+</head>
+<body>
+    <h2 id="studentInfo">學號：91018125<br>姓名：黎秉政</h2>
+    <img id="profile" src="411065415_1282684262403124_5229917073071358542_n.jpg" alt="大頭照">
+    <br>
+    <button onclick="adjustText()">調整字體和顏色</button>
+    <button onclick="adjustProfile()">調整大頭照</button>
+    <button onclick="changePhoto()">換圖</button>
+
+    <script>
+        function adjustText() {
+            const studentInfo = document.getElementById("studentInfo");
+            studentInfo.style.fontSize = "20px";
+            studentInfo.style.color = "blue";
+        }
+        
+        function adjustProfile() {
+        const profile = document.getElementById("profile");
+
+        setTimeout(() => {
+            profile.style.borderRadius = "50%";
+        }, 1000);
+    }
+
+        
+        
+
+        function changePhoto() {
+            const profile = document.getElementById("profile");
+            profile.src = "410125962_343471758472464_412402138387320836_n.jpg";
+        }
+    </script>
+</body>
+</html>
